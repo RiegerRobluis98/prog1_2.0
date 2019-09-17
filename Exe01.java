@@ -1,18 +1,26 @@
-import java.util.Scanner;
-public class ExeClass01 {
+package lista02;
 
-	public static void main(String[] args) {
-	// Declarações
-		Scanner key = new Scanner(System.in);
-		int val1, val2, res;
-	// Entrada
-		System.out.println("Digite dois Valores:");
-		val1 = key.nextInt();
-		val2 = key.nextInt();
-	// Processamento
-		res = val1 * val2;
-	// Saída
-		System.out.println("O Resultado é "+res);
-	}
+import javax.swing.JOptionPane;
 
+public class Exe01 {
+
+    public static void main(String[] args) {
+
+        String timeA, timeB;
+        timeA = JOptionPane.showInputDialog("Digite o nome do 1o time:");
+        timeB = JOptionPane.showInputDialog("Digite o nome do 2º time:");
+        
+        int golsA, golsB;
+        golsA = Integer.parseInt(JOptionPane.showInputDialog("Quantos gols " + timeA + " fez? "));
+        golsB = Integer.parseInt(JOptionPane.showInputDialog("Quantos gols " + timeB + " fez? "));
+        if (golsA > golsB) {
+            JOptionPane.showMessageDialog(null, "Vencedor: " + timeA);
+        }
+        if (golsB > golsA){
+        JOptionPane.showMessageDialog(null, "Vencedor: " + timeB);
+        }
+        if (golsA == golsB) {
+        JOptionPane.showMessageDialog(null, "EMPATE");
+        }
+    }
 }
